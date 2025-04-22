@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vantix Studios</title>
+    <style>
+      /* Reset & Base */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        height: 100%;
+        margin: 0;
+        background: transparent;
+      }
+      body {
+        color: #fff;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        overflow: auto;
+      }
+      a { color: #5ac8fa; text-decoration: none; }
+      img { display: block; max-width: 100%; height: auto; }
+
+      /* Particles Background */
+      #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: -1;
+      }
+
+      /* Layout */
+      header, section, footer { width: 100%; }
+      .container { max-width: 960px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
+
+      /* Header */
+      header {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 40px 0 20px;
+      }
+      .logo { max-width: 400px; margin: 0 auto; }
+
+      /* Hero */
+      .hero {
+        text-align: center;
+        padding: 20px 20px;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+      .hero p {
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto 20px;
+      }
+
+      /* Games Section */
+      .games {
+        background: transparent;
+        padding: 60px 20px;
+      }
+      .games .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .game-card {
+        background: #1a1a1a;
+        border-radius: 10px;
+        padding: 30px;
+        width: 280px;
+        text-align: center;
+      }
+      .game-card h3 {
+        margin-bottom: 15px;
+      }
+      .game-card p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+
+      /* About Section */
+      .about {
+        padding: 60px 20px;
+      }
+      .about p { max-width: 800px; margin: 0 auto; }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 0.875rem;
+        color: #555;
+      }
+    </style>
+    <!-- Particles.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  </head>
+  <body>
+    <!-- Particle background container -->
+    <div id="particles-js"></div>
+
+    <header>
+      <img src="VantixLogo.png" alt="Vantix Studios Logo" class="logo" />
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Innovative Gaming Experiences</h1>
+        <p>We craft engaging games that inspire curiosity and challenge your mind. <br> Today and every day.</p>
+      </div>
+    </section>
+
+    <section id="games" class="games">
+      <div class="container">
+        <div class="game-card">
+          <h3>Stealth</h3>
+          <p>Stealth project.</p>
+          <a href="#" class="btn">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Upcoming Titles</h3>
+          <p>Stay tuned for our next releases!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <h2>About Vantix Studios</h2>
+        <p>At Vantix Studios, we blend classic game mechanics with modern technology to deliver memorable gaming experiences. From daily brain teasers to innovative AI-driven challenges, our mission is to engage players worldwide.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Vantix Studios. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Initialize particles.js -->
+    <script>
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 150, density: { enable: true, value_area: 800 } },
+          color: { value: ['#ffffff', '#5ac8fa'] },
+          shape: { type: ['circle', 'triangle'] },
+          opacity: { value: 0.5, anim: { enable: true, speed: 1, opacity_min: 0.2, sync: false } },
+          size: { value: 4, random: true, anim: { enable: true, speed: 4, size_min: 0.3, sync: false } },
+          line_linked: { enable: true, distance: 200, color: '#5ac8fa', opacity: 0.3, width: 1 },
+          move: { enable: true, speed: 1.5, direction: 'bottom-right', random: true, straight: false, out_mode: 'out', bounce: false, attract: { enable: true, rotateX: 600, rotateY: 1200 } }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'bubble' }, resize: true },
+          modes: { grab: { distance: 180, line_linked: { opacity: 0.6 } }, bubble: { distance: 200, size: 5, duration: 2, opacity: 0.8 } }
+        },
+        retina_detect: true
+      });
+    </script>
+  </body>
+</html>
